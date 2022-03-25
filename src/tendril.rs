@@ -181,7 +181,7 @@ pub enum SubtendrilError {
 /// The maximum length of a `Tendril` is 4 GB. The library will panic if
 /// you attempt to go over the limit.
 #[repr(C)]
-pub struct Tendril<F, A = NonAtomic>
+pub struct Tendril<F, A = Atomic>
 where
     F: fmt::Format,
     A: Atomicity,
